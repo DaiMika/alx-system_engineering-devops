@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
-# displays Best School 10 times.
+#using a while loop, loop 10 times
+# bad luck 4th loop 
+# good luck the second loop
+# Best school will be displayed for the other iteration
+#after shellcheck is used you should get no error
 
-COUNTER=1
-while [ $COUNTER -lt 11 ]
-do
-    if [ $COUNTER = 4 ]
-    then
-        echo "bad luck"
-    elif [ $COUNTER = 8 ]
-    then
-        echo "good luck"
-    else
-        echo "Best School"
-    fi
-    let COUNTER+=1
+var1="bad luck"
+var2="good luck"
+var3="Best School"
+i="0"
+while [ $i -ne 10 ]; do
+	if [ $i -eq 3 ]; then
+		echo "$var1"
+	elif [ $i -eq 7 ]; then
+		echo "$var2"
+	else
+		echo "$var3"
+	fi
+	((i++))
 done
