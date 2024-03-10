@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-# displays Best School 10 times.
+#using a while loop to print Best school 10 times
+#after shellcheck is used you should get no error
+#the _ variable represents an unused variable
 
-COUNTER=0
-while [ $COUNTER -lt 10 ]
-do
-    echo "Best School"
-    let COUNTER=COUNTER+1
+var="Best School"
+i="0"
+while [ $i -lt 10 ]; do
+	echo "$var"
+	((i++))
 done
